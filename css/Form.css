@@ -1,0 +1,129 @@
+body{
+    font-family:"DM Sans", sans-serif;
+}
+
+.submit-btn{
+    display: flex;
+    justify-content: end;
+}
+
+.request-section{
+    margin-right: 30px;
+}
+
+.request-section h2{
+    font-size: 42px;
+    
+}
+
+.callback-heading {
+    color: #2b9348;
+    position: relative;
+    display: inline-block;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-right: 167px solid transparent;
+    border-top: 15px solid #ff8a00;
+    margin-left: 205px;
+    margin-top: -5px;
+}
+
+.form-control{
+  background-color: #f5f5f5;
+  padding: 10px;
+  height: 50px;
+  border: none;
+}
+
+.btn.btn-warning {
+    color: #ffffff;
+    background-color: #511398;
+    border:none;
+    width: 120px;
+    border-radius: 30px;
+    transition: ease-in-out 0.3s;
+}
+
+.btn-warning:hover {
+    background-color: #9e4ff1;
+}
+
+.custom-shape-divider-bottom-1726119030 {
+    position: absolute;
+    bottom: 201px;
+    left: 201px;
+    width: 350px; 
+    height: 200px;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(-90deg) translateX(-50%); 
+    transform-origin: bottom left;
+    opacity: 0.2;
+}
+
+.custom-shape-divider-bottom-1726119030 svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%; 
+}
+
+.custom-shape-divider-bottom-1726119030 .shape-fill {
+    fill: #813867;
+}
+
+@media (max-width: 1201px) {
+    .request-section h2{
+        font-size: 30px;
+    }
+    .triangle {
+        border-right: 125px solid transparent;
+        border-top: 15px solid #ff8a00;
+        margin-left: 142px;
+        margin-top: -4px;
+    }
+}
+
+@media (max-width: 990px) {
+    .request-section{
+        margin-right: 0;
+    }
+    /* .request-section h2{
+        font-size: 30px;
+    } */
+
+    .request-section h2{
+        font-size: 30px;
+    }
+    .triangle {
+        border-right: 125px solid transparent;
+        border-top: 15px solid #ff8a00;
+        margin-left: -3px;
+        margin-top: -4px;
+    }
+
+    
+}
+
+@media(max-width:765px){
+    .triangle {
+        border-right: 125px solid transparent;
+        border-top: 15px solid #ff8a00;
+        margin-left: 151px;
+        margin-top: -4px;
+    }
+}
+
+@media (max-width: 415px) {
+     .request-section h2{
+        font-size: 30px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .triangle {
+        margin-left: -3px;
+    }
+}

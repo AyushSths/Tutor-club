@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* background-color: #f5f5f5; */
+}
+
+.container{
+    max-width:1040px;
+}
+.bg-gradient {
+    background:#511392;
+    padding: 60px 55px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.mentor-section {
+    overflow: hidden;
+    margin:0 20px 0 20px;
+    
+}
+
+.mentor-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background: rgba(183, 183, 183, 0.1);
+    clip-path: polygon(-10% 0%, 100% 0%, 100% 86%, 30% 70%);
+    z-index: 0;
+}
+
+.image-placeholder {
+    width: 220px;
+    height: 220px;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.mentor-content {
+    z-index: 1;
+}
+
+.mentor-content h2 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.mentor-content p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.btn-primary {
+    background-color: white;
+    color: #511392;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 1em;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+    transition: ease-in-out 0.3s ;
+}
+
+.btn-primary:hover {
+    background-color: #dbc8f0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bg-gradient {
+        padding: 40px;
+    }
+
+    .mentor-section::before {
+        width: 150px;
+        clip-path: polygon(-10% 0%, 100% 0%, 100% 86%, 30% 70%);
+
+    }
+
+    .image-placeholder {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+    }
+
+    .mentor-content h2 {
+        font-size: 1.8em;
+        text-align: center;
+    }
+
+    .mentor-content p {
+        text-align: center;
+    }
+
+    .btn-primary {
+        width: 100%;
+        padding: 15px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .bg-gradient {
+        padding: 20px;
+    }
+
+    .mentor-section::before {
+        width: 120px;
+               clip-path: polygon(-10% 0%, 100% 0%, 100% 86%, 30% 70%);
+
+    }
+
+    .image-placeholder {
+        width: 120px;
+        height: 120px;
+    }
+
+    .mentor-content h2 {
+        font-size: 1.5em;
+    }
+
+    .mentor-content p {
+        font-size: 0.9em;
+    }
+
+    .btn-primary {
+        padding: 12px 0;
+    }
+}
