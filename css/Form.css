@@ -51,30 +51,6 @@ body{
     background-color: #9e4ff1;
 }
 
-.custom-shape-divider-bottom-1726119030 {
-    position: absolute;
-    bottom: 201px;
-    left: 201px;
-    width: 350px; 
-    height: 200px;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(-90deg) translateX(-50%); 
-    transform-origin: bottom left;
-    opacity: 0.2;
-}
-
-.custom-shape-divider-bottom-1726119030 svg {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 100%; 
-}
-
-.custom-shape-divider-bottom-1726119030 .shape-fill {
-    fill: #813867;
-}
-
 @media (max-width: 1201px) {
     .request-section h2{
         font-size: 30px;
