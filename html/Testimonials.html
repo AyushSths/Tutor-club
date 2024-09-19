@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/testi.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<script>
+    let currentSlide = 0;
+    let autoSlideInterval;
+
+    const showSlide = (index) => {
+        const slides = document.querySelectorAll('.inner-section');
+        const dots = document.querySelectorAll('.dot');
+        const slider = document.getElementById('slider');
+
+        dots.forEach(dot => dot.classList.remove('active'));
+
+        currentSlide = (index * 2) % slides.length;
+
+        dots[Math.floor(currentSlide / 2)].classList.add('active');
+
+        const slideWidth = slides[0].clientWidth;
+
+        slider.scrollTo({
+            left: currentSlide * slideWidth,
+            behavior: 'smooth'
+        });
+    };
+
+    const slideLeft = () => {
+        const slides = document.querySelectorAll('.inner-section');
+        const totalSlides = slides.length;
+
+        currentSlide = (currentSlide - 2 + totalSlides) % totalSlides;
+        showSlide(Math.floor(currentSlide / 2));
+    };
+
+    const slideRight = () => {
+        const slides = document.querySelectorAll('.inner-section');
+        const totalSlides = slides.length;
+
+        currentSlide = (currentSlide + 2) % totalSlides;
+        showSlide(Math.floor(currentSlide / 2));
+    };
+
+    const startAutoSlide = () => {
+        autoSlideInterval = setInterval(() => {
+            slideRight();
+        }, 2000);
+    };
+
+    const stopAutoSlide = () => {
+        clearInterval(autoSlideInterval);
+    };
+
+    const createDots = () => {
+        const slides = document.querySelectorAll('.inner-section');
+        const dotsContainer = document.querySelector('.dots');
+        dotsContainer.innerHTML = ''; // Clear existing dots
+
+        const dotCount = Math.ceil(slides.length / 2);
+
+        for (let i = 0; i < dotCount; i++) {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            if (i === 0) dot.classList.add('active'); 
+            dot.addEventListener('click', () => {
+                showSlide(i);
+                stopAutoSlide(); 
+                startAutoSlide(); 
+            });
+            dotsContainer.appendChild(dot);
+        }
+    };
+
+    window.onload = () => {
+        currentSlide = 0;
+        createDots(); 
+        showSlide(currentSlide); 
+        startAutoSlide(); 
+    };
+</script>
+
+
+
+
+<body>
+   <div class="main-container">
+       <div class="section-title">
+            <h2>Student's Testimonials about TutorClub</h2>
+            <p>1000+ unique course list designs</p>
+       </div>
+        <div class="main" id="slider">
+            <div class="inner-section">
+                <div class="img-placeholder">
+                    <img src="../mentor-3.jfif" alt="">
+                    <p class="name">Name</p>
+                    <p class="location">Location</p>
+                </div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, deleniti dicta. Eius perspiciatis eaque inventore culpa quidem voluptatum! Voluptas id amet mollitia numquam saepe vero magnam iusto architecto ullam illo.</p>
+                </div>
+            </div>
+
+            <div class="inner-section">
+                <div class="img-placeholder">
+                    <img src="../mentor.jpg" alt="">
+                    <p class="name">Name</p>
+                    <p class="location">Location</p>
+                </div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, deleniti dicta. Eius perspiciatis eaque inventore culpa quidem voluptatum! Voluptas id amet mollitia numquam saepe vero magnam iusto architecto ullam illo.</p>
+                </div>
+            </div>
+
+            <div class="inner-section">
+                <div class="img-placeholder">
+                    <img src="../mentor.jpg" alt="">
+                    <p class="name">Name</p>
+                    <p class="location">Location</p>
+                </div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, deleniti dicta. Eius perspiciatis eaque inventore culpa quidem voluptatum! Voluptas id amet mollitia numquam saepe vero magnam iusto architecto ullam illo.</p>
+                </div>
+            </div>
+
+            <div class="inner-section">
+                <div class="img-placeholder">
+                    <img src="../mentor-3.jfif" alt="">
+                    <p class="name">Name</p>
+                    <p class="location">Location</p>
+                </div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, deleniti dicta. Eius perspiciatis eaque inventore culpa quidem voluptatum! Voluptas id amet mollitia numquam saepe vero magnam iusto architecto ullam illo.</p>
+                </div>
+            </div>
+
+            <div class="inner-section">
+                <div class="img-placeholder">
+                    <img src="../mentor-3.jfif" alt="">
+                    <p class="name">Name</p>
+                    <p class="location">Location</p>
+                </div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, deleniti dicta. Eius perspiciatis eaque inventore culpa quidem voluptatum! Voluptas id amet mollitia numquam saepe vero magnam iusto architecto ullam illo.</p>
+                </div>
+            </div>
+
+              <div class="inner-section">
+                <div class="img-placeholder">
+                    <img src="../mentor-3.jfif" alt="">
+                    <p class="name">Name</p>
+                    <p class="location">Location</p>
+                </div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, deleniti dicta. Eius perspiciatis eaque inventore culpa quidem voluptatum! Voluptas id amet mollitia numquam saepe vero magnam iusto architecto ullam illo.</p>
+                </div>
+            </div>
+
+              <div class="inner-section">
+                <div class="img-placeholder">
+                    <img src="../mentor-3.jfif" alt="">
+                    <p class="name">Name</p>
+                    <p class="location">Location</p>
+                </div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, deleniti dicta. Eius perspiciatis eaque inventore culpa quidem voluptatum! Voluptas id amet mollitia numquam saepe vero magnam iusto architecto ullam illo.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="sliders-btns">
+            <button class="slider-button" onclick="slideLeft()"><i class="fa-solid fa-arrow-left"></i></button>
+
+            <div class="dots"></div>
+
+            <button class="slider-button" onclick="slideRight()"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+   </div>
+</body>
+</html>
