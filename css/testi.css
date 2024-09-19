@@ -59,7 +59,7 @@
         object-fit: contain;
     }
 
-    .sliders-btns{
+    .main-container .sliders-btns{
         display: flex;
         align-items: center;
         justify-content: center;
@@ -67,29 +67,29 @@
         padding-bottom: 60px;
     }
 
-    .sliders-btns .slider-button{
+    .main-container .sliders-btns .slider-button{
         background: none;
         border: none;
        transition:all .3s cubic-bezier(.215,.61,.355,1)
     }
 
-      .sliders-btns .slider-button i{
+    .main-container .sliders-btns .slider-button i{
         cursor: pointer;
         color: #ffffff;
         font-size: 24px;
        
       }
 
-      .sliders-btns .slider-button:hover{
+      .main-container .sliders-btns .slider-button:hover{
         transform: scale(1.2);
       }
 
-       .sliders-btns .dots {
+       .main-container .sliders-btns .dots {
         display: flex;
         gap: 10px;
-    }
+      }
 
-    .sliders-btns .dots .dot {
+    .main-container .sliders-btns .dots .dot {
         height: 12px;
         width: 12px;
         background-color: #bbb;
@@ -98,7 +98,7 @@
         transition: background-color 0.3s ease;
     }
 
-    .sliders-btns .dots .dot.active {
+    .main-container .sliders-btns .dots .dot.active {
         background-color: white;
     }
 
